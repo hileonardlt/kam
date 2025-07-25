@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kamui Flow</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    .unicorn-embed {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div
+    class="unicorn-embed"
+    data-us-project-src="https://hileonardlt.github.io/kamglow/Kamui-Flow.json"
+    data-us-scale="1"
+    data-us-dpi="1.5"
+    data-us-lazyload="false"
+    data-us-disablemobile="true"
+    data-us-disablemouse="false"
+    data-us-alttext="Kamui Flow Scene"
+    data-us-arialabel="UnicornStudio animation scene"
+  ></div>
+
+  <script src="https://cdn.unicorn.studio/v1/unicornstudio.min.js"></script>
+  <script>
+    UnicornStudio.init()
+      .then((scenes) => {
+        console.log("UnicornStudio initialized", scenes);
+      })
+      .catch((err) => {
+        console.error("Failed to load UnicornStudio:", err);
+      });
+  </script>
+</body>
+</html>
